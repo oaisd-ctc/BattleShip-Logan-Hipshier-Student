@@ -45,7 +45,7 @@ public class game
 
             else if (ans.ToLower().Equals("b"))
             {
-                Console.WriteLine("\n" + b + "\n");
+                Console.WriteLine("\n" + b.toString() + "\n");
             }
             if (ans.ToLower().Equals("p"))
             {
@@ -107,7 +107,7 @@ public class game
             }
             else if (ans.ToLower().Equals("B"))
             {
-                Console.WriteLine("\n" + b + "\n");
+                Console.WriteLine("\n" + b.toString() + "\n");
             }
         }
 
