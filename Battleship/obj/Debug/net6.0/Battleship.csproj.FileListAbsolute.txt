@@ -1,0 +1,5 @@
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.csproj.AssemblyReference.cache
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.AssemblyInfoInputs.cache
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.AssemblyInfo.cs
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.csproj.CoreCompileInputs.cache

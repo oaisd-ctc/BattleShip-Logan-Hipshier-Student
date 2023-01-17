@@ -71,7 +71,7 @@ public static void main(string[]args){
                         int result=b.shoot(r,c);
 
                         if(result ==1){
-                            Console.WriteLine("\nHit!\n")
+                            Console.WriteLine("\nHit!\n");
                         }
                         else if (result==0){
                             Console.WriteLine("\nMiss!\n");
