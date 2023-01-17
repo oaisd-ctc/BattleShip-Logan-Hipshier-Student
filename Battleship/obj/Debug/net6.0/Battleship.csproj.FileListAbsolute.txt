@@ -3,3 +3,13 @@
 /workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.AssemblyInfoInputs.cache
 /workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.AssemblyInfo.cs
 /workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.csproj.CoreCompileInputs.cache
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/bin/Debug/net6.0/Battleship
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/bin/Debug/net6.0/Battleship.deps.json
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/bin/Debug/net6.0/Battleship.runtimeconfig.json
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/bin/Debug/net6.0/Battleship.dll
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/bin/Debug/net6.0/Battleship.pdb
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.dll
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/refint/Battleship.dll
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.pdb
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/Battleship.genruntimeconfig.cache
+/workspaces/3-day-project-Logan-Hipshier-Student/Battleship/obj/Debug/net6.0/ref/Battleship.dll
