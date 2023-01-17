@@ -1,4 +1,8 @@
-﻿using MyBattleShip;
+﻿/* NOTES & TODO:
+1. !!FIX ASAP!! The board doesn't update and display the placed ships
+2. !!FIX ASAP!! Game does not recognize the user input, cannot play
+*/
+using MyBattleShip;
 public class game
 {
 
@@ -10,6 +14,7 @@ public class game
         Console.WriteLine("Welcome to Battleship!\n");
         bool addNew = true;
 
+        Console.Clear();
         while (addNew)
         {
             Console.WriteLine("Type \"a\" to add new ship, \"b\" to see the board, \"p\" to play, or \"q\" to quit.");
