@@ -56,7 +56,7 @@ public class game
                 }
                 else
                 {
-                    Console.WriteLine("\nyou need ships of length 3 and 4 to play!\n");
+                    Console.WriteLine("\nYou need ships of length 3 and 4 to play!\n");
                 }
 
 
@@ -69,7 +69,7 @@ public class game
         while (!b.gameOver())
         {
 
-            Console.WriteLine("Press \"s\" to shoot at a square, \"b\" to see ther board, \"q\" to quit.");
+            Console.WriteLine("Press \"s\" to shoot at a square, \"b\" to see the board, \"q\" to quit.");
             string ans = Console.ReadLine();
             if (ans.ToLower().Equals("q")) { return; }
 
