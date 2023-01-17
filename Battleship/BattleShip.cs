@@ -1,11 +1,11 @@
 namespace MyBattleShip
 {
 
-    public class BattleShip
+    public  class BattleShip
     {
-        private string[,] squares;
+        private  string[,] squares;
 
-        public void Board()
+        public BattleShip()
         {
             squares = new String[10, 10];
             for (int i = 0; i < squares.GetLength(0); i++)
@@ -16,9 +16,10 @@ namespace MyBattleShip
 
                 }
             }
+            
         }
 
-        public string toString()
+        public  string toString()
         {
             string Output = "";
             for (int i = 0; i < squares.GetLength(0); i++)
@@ -33,7 +34,7 @@ namespace MyBattleShip
             return Output;
         }
 
-        public bool addShip(int row, int col, int len, bool horizontal)
+        public  bool addShip(int row, int col, int len, bool horizontal)
         {
             // If ship is off grid return false
             if (row < 0 || col < 0 || row >= squares.GetLength(1) || col >= squares.GetLength(0))
@@ -90,7 +91,7 @@ namespace MyBattleShip
         }
 
 
-        public bool foundShip(int len)
+        public  bool foundShip(int len)
         {
             for (int i = 0; i < squares.GetLength(0); i++)
             {
@@ -143,7 +144,7 @@ namespace MyBattleShip
 
         }
 
-        public int shoot(int row, int col){
+        public  int shoot(int row, int col){
             if(row<0||col<0||row>=squares.GetLength(0)||col>=squares.GetLength(1)){
                 return(-1);
             }
@@ -158,7 +159,7 @@ namespace MyBattleShip
             return 2;
 
         }
-        public bool gameOver(){
+        public  bool gameOver(){
             for(int i = 0;i<squares.GetLength(0);i++){
             for(int k = 0; k<squares.GetLength(1);k++){
                 if(squares[i,k].Equals("b")){return false;}
