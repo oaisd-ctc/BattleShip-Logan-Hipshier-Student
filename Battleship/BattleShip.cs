@@ -89,47 +89,95 @@ namespace MyBattleShip
 
         }
 
-        
-        public bool foundShip(int len){
-            for(int i = 0; i<squares.GetLength(0);i++){
-                int counter =0;
-                while(counter<squares.GetLength(1)){
-                    int foundLen=0;
-                    while(counter<squares.GetLength(1)&&squares[i,counter].Equals("b")){
+
+        public bool foundShip(int len)
+        {
+            for (int i = 0; i < squares.GetLength(0); i++)
+            {
+                int counter = 0;
+                while (counter < squares.GetLength(1))
+                {
+                    int foundLen = 0;
+                    while (counter < squares.GetLength(1) && squares[i, counter].Equals("b"))
+                    {
                         foundLen++;
                         counter++;
                     }
-                    if(foundLen==len)
+                    if (foundLen == len)
                     { //this could be wrong, if fails check here
                         return true;
-                    foundLen=0;
-                    counter++;
                     }
+                    foundLen = 0;
+                    counter++;
+
 
 
                 }
 
             }
-            for(int k =0;k<squares.GetLength(1);k++){
+            for (int k = 0; k < squares.GetLength(1); k++)
+            {
                 int counter = 0;
-            }
+                while (counter < squares.GetLength(0))
+                {
+                    int foundLen = 0;
+                    while (counter < squares.GetLength(0) && squares[counter, k].Equals("b"))
+                    {
+                        foundLen++;
+                        counter++;
+                    }
+                    if (foundLen == len) { return true; }
+                    foundLen = 0;
+                    counter++;
 
+
+                }
+
+
+
+
+            }
+            return false;
 
 
 
         }
 
+        public int shoot(int row, int col){
+            if(row<0||col<0||row>=squares.GetLength(0)||col>=squares.GetLength(1)){
+                return(-1);
+            }
+            if(squares[row,col].Equals("-")){
+                squares[row,col] ="m";
+                return 0;
+            }
+            if(squares[row,col].Equals("b")){
+                squares[row,col]="x";
+                return 1;
+            }
+            return 2;
+
+        }
+        public bool gameOver(){
+            for(int i = 0;i<squares.GetLength(0);i++){
+            for(int k = 0; k<squares.GetLength(1);k++){
+                if(squares[i,k].Equals("b")){return false;}
+            }
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            }
+            return true;
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }
 
