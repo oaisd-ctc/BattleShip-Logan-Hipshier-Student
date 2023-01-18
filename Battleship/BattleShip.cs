@@ -94,7 +94,7 @@ namespace MyBattleShip
             //vertical checks
             else
             {
-                if (row + len > squares.GetLength(0)) {Console.WriteLine("Failed"); return false; }
+                if (row + len > squares.GetLength(0)) {return false; }
                 //check to see if another ship is in the way
                 for (int r = row; r < row + len; r++)
                 {
