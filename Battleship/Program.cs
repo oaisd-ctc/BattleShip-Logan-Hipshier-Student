@@ -108,6 +108,7 @@ public class game
                 
                     addNew = false;
                     Console.WriteLine("\nOk let\'s play!\n");
+                    Console.WriteLine("Destroy all 3 enemy ships to win!");
             }
 
 
@@ -124,10 +125,12 @@ public class game
             else if (ans.ToLower().Equals("s"))
             {
                 //get r and c to shoot
-                Console.WriteLine("Input row");
-                int r = Convert.ToInt32(Console.ReadLine);
-                Console.WriteLine("Input column");
-                int c = Convert.ToInt32(Console.ReadLine);
+                Console.WriteLine("Input row (0-9)");
+                string r1 = Console.ReadLine();
+                int r = Convert.ToInt32(r1);
+                Console.WriteLine("Input column (0-9");
+                string c1 = Console.ReadLine();
+                int c = Convert.ToInt32(c1);
 
                 int result = b.shoot(r, c);
 
@@ -153,7 +156,11 @@ public class game
 
 
             }
-            else if (ans.ToLower().Equals("B"))
+            else if (ans.ToLower().Equals("b"))
+            {
+                Console.WriteLine("\n" + b.playertoString() + "\n");
+            }
+            else if (ans.ToLower().Equals("z"))
             {
                 Console.WriteLine("\n" + b.toString() + "\n");
             }
