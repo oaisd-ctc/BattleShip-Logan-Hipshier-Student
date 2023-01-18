@@ -69,7 +69,7 @@ namespace MyBattleShip
             {
                 if (col + len > squares.GetLength(0))
                 {
-                    Console.WriteLine("Failed");
+                    
                     return false;
                 }
                 // check if ship is in way
@@ -77,7 +77,7 @@ namespace MyBattleShip
                 {
                     if (squares[row, c]!="-")
                     {
-                        Console.WriteLine("Failed");
+                        
                         return false;
 
                     }
@@ -85,7 +85,7 @@ namespace MyBattleShip
                 for (int c = col; c < col + len; c++)
                 {
                     squares[row, c] = "b";
-                    Console.WriteLine("added");
+                    
                 }
 
 
@@ -98,14 +98,14 @@ namespace MyBattleShip
                 //check to see if another ship is in the way
                 for (int r = row; r < row + len; r++)
                 {
-                    if (squares[r, col]!="-") { Console.WriteLine("Failed");return false; }
+                    if (squares[r, col]!="-") { return false; }
 
 
                 }
                 for (int r = row; r < row + len; r++)
                 {
                     squares[r, col] = "b";
-                    Console.WriteLine("added");
+                    
                 }
 
 

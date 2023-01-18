@@ -92,8 +92,10 @@ public class game
 
             }
 
-                Console.WriteLine("\n" + b.toString() + "\n");
+               /* testing aid 
+               Console.WriteLine("\n" + b.toString() + "\n");
                 Console.WriteLine("\n" + b.playertoString() + "\n");
+                */
 
 
             /*else if (ans.ToLower().Equals("b"))
