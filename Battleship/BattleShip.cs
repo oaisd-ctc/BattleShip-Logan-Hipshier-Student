@@ -3,7 +3,8 @@ namespace MyBattleShip
 
     public class BattleShip
     {
-        private string[,] squares;
+         string[,] squares;
+         string[,] playerview;
 
         public BattleShip()
         {
@@ -13,6 +14,15 @@ namespace MyBattleShip
                 for (int k = 0; k < squares.GetLength(1); k++)
                 {
                     squares[i, k] = "-";
+
+                }
+            }
+            playerview=new String[10,10];
+            for (int i = 0; i < playerview.GetLength(0); i++)
+            {
+                for (int k = 0; k < playerview.GetLength(1); k++)
+                {
+                    playerview[i, k] = "-";
 
                 }
             }
@@ -33,6 +43,19 @@ namespace MyBattleShip
             }
             return Output;
         }
+        public string playertoString(){
+            string Output = "";
+            for (int i = 0; i < playerview.GetLength(0); i++)
+            {
+                for (int k = 0; k < playerview.GetLength(1); k++)
+                {
+                    Output += playerview[i, k] + " ";
+
+                }
+                Output += "\n";
+            }
+            return Output;
+        }
 
         public bool addShip(int row, int col, int len, bool horizontal)
         {
@@ -46,13 +69,15 @@ namespace MyBattleShip
             {
                 if (col + len > squares.GetLength(0))
                 {
+                    Console.WriteLine("Failed");
                     return false;
                 }
                 // check if ship is in way
                 for (int c = col; c < col + len; c++)
                 {
-                    if (!squares[row, c].Equals("-"))
+                    if (squares[row, c]!="-")
                     {
+                        Console.WriteLine("Failed");
                         return false;
 
                     }
@@ -60,6 +85,7 @@ namespace MyBattleShip
                 for (int c = col; c < col + len; c++)
                 {
                     squares[row, c] = "b";
+                    Console.WriteLine("added");
                 }
 
 
@@ -68,17 +94,18 @@ namespace MyBattleShip
             //vertical checks
             else
             {
-                if (row + len > squares.GetLength(0)) { return false; }
+                if (row + len > squares.GetLength(0)) {Console.WriteLine("Failed"); return false; }
                 //check to see if another ship is in the way
                 for (int r = row; r < row + len; r++)
                 {
-                    if (!squares[r, col].Equals("-")) { return false; }
+                    if (squares[r, col]!="-") { Console.WriteLine("Failed");return false; }
 
 
                 }
                 for (int r = row; r < row + len; r++)
                 {
                     squares[r, col] = "b";
+                    Console.WriteLine("added");
                 }
 
 
@@ -152,11 +179,13 @@ namespace MyBattleShip
             }
             if (squares[row, col].Equals("-"))
             {
+                playerview[row, col] = "m";
                 squares[row, col] = "m";
                 return 0;
             }
             if (squares[row, col].Equals("b"))
-            {
+            {   
+                playerview[row, col] = "x";
                 squares[row, col] = "x";
                 return 1;
             }

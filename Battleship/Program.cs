@@ -17,13 +17,13 @@ public class game
         Console.Clear();
         while (addNew)
         {
-            Console.WriteLine("Type \"a\" to add new ship, \"b\" to see the board, \"p\" to play, or \"q\" to quit.");
+            Console.WriteLine("Type \"p\" to play, or \"q\" to quit.");
             string ans = Console.ReadLine();
             if (ans.ToLower().Equals("q"))
             {
                 return;
             }
-            if (ans.ToLower().Equals("a"))
+           /* if (ans.ToLower().Equals("a"))
             {
                 //Get parameters for new ship
                 Console.WriteLine("Starting in which row?");
@@ -46,25 +46,68 @@ public class game
 
 
 
+            }*/
+            Random rand = new Random();
+            int r1 = rand.Next(0,11);
+            int c1 = rand.Next(0,11);
+            int l1 = rand.Next(3,7);
+            int h1int= rand.Next(0,2);
+            bool h1 = false;
+            if(h1int == 0){h1 = true;}
+            while(!b.addShip(r1, c1, l1, h1)){
+                r1 = rand.Next(0,11);
+                c1 = rand.Next(0,11);
+                l1 = rand.Next(3,7);
+                h1int= rand.Next(0,2);
+                h1 = false;
+                if(h1int == 0){h1 = true;}
+                }
+                
+
+            int r2 = rand.Next(0,11);
+            int c2 = rand.Next(0,11);
+            int l2 = rand.Next(3,7);
+            int h2int= rand.Next(0,2);
+            bool h2 = false;
+            if(h2int == 0){h2 = true;}
+            while(!b.addShip(r2, c2, l2, h2)){
+                r2 = rand.Next(0,11);
+                c2 = rand.Next(0,11);
+                l2 = rand.Next(3,7);
+                h2int= rand.Next(0,2);
+                h2 = false;
+                if(h2int == 0){h2 = true;}
+
+            }
+            int r3 = rand.Next(0,11);
+            int c3 = rand.Next(0,11);
+            int l3 = rand.Next(3,7);
+            int h3int= rand.Next(0,2);
+            bool h3 = false;
+            if(h3int == 0){h3 = true;}
+            while(!b.addShip(r3, c3, l3, h3)){
+                r3 = rand.Next(0,11);
+                c3 = rand.Next(0,11);
+                l3 = rand.Next(3,7);
+                h3int= rand.Next(0,2);
+                h3 = false;
+                if(h3int == 0){h3 = true;}
+
             }
 
-            else if (ans.ToLower().Equals("b"))
+                Console.WriteLine("\n" + b.toString() + "\n");
+                Console.WriteLine("\n" + b.playertoString() + "\n");
+
+
+            /*else if (ans.ToLower().Equals("b"))
             {
                 Console.WriteLine("\n" + b.toString() + "\n");
-            }
+            }*/
             if (ans.ToLower().Equals("p"))
             {
-                if (b.foundShip(3) && b.foundShip(4))
-                {
+                
                     addNew = false;
                     Console.WriteLine("\nOk let\'s play!\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nYou need ships of length 3 and 4 to play!\n");
-                }
-
-
             }
 
 
