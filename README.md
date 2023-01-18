@@ -21,5 +21,3 @@ To play our battleship game to play press (P) if you would like to quit press (Q
 ---
 ![Example of the game board](imagesReadMe/example1.png)
 ![Another example of the game board](imagesReadMe/example2.png)
-
-[//]: # (Need to add screenshots and explaination. Maybe add more detail to text)
