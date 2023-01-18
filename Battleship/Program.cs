@@ -120,14 +120,13 @@ public class game
         {
 
             Console.WriteLine("Press \"s\" to shoot at a square, \"b\" to see the board, \"q\" to quit.");
-            Console.WriteLine();
             string ans = Console.ReadLine();
             if (ans.ToLower().Equals("q")) { return; }
 
             else if (ans.ToLower().Equals("s"))
             {
                 //get r and c to shoot
-                Console.WriteLine("Input row (0-9)");
+                Console.WriteLine("\nInput row (0-9)");
                 string r1 = Console.ReadLine();
                 int r = Convert.ToInt32(r1);
                 Console.WriteLine("Input column (0-9)");
