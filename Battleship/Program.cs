@@ -1,8 +1,4 @@
-﻿/* NOTES & TODO:
-1. !!FIX ASAP!! The board doesn't update and display the placed ships
-2. !!FIX ASAP!! Game does not recognize the user input, cannot play
-*/
-using MyBattleShip;
+﻿using MyBattleShip;
 public class game
 {
 
